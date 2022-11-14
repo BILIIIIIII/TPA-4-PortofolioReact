@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border-style: none;
+}
+
+@font-face {
+  font-family: poppins-XBI;
+  src: url(../ttf-font/PoppinsLatin-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: poppins-MI;
+  src: url(../ttf-font/PoppinsLatin-MediumItalic.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: poppins-XBI;
+}
+
+#sec1 {
+  height: 100vh;
+}
+/* ----------------------------------------------------------------------------------------------------------- */
+#sec1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(../img/BlurgradientbyNunny.jpeg);
+  background-size: cover;
+}
+#blur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(234, 211, 255, 0.5);
+  padding: 20px 32px;
+  height: 100vh;
+}
+
+.top,
+.bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-family: poppins-MI;
+  /* border-bottom: 1px solid black; */
+}
+
+.top h3,
+.bottom h3 {
+  cursor: default;
+  margin: 20px;
+  font-size: 14px;
+}
+
+.bottom h3,
+.path {
+  color: rgb(0 0 0 / 0.5);
+}
+
+.name,
+.path {
+  font-weight: 500;
+  /* border-bottom: 1px solid black; */
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.center h5 {
+  cursor: default;
+  margin-bottom: 60px;
+}
+
+#c-h1 {
+  position: relative;
+  color: black;
+  font-size: 120px;
+  cursor: default;
+  -webkit-text-fill-color: rgb(255, 199, 130);
+  -webkit-text-stroke-width: 2px;
+  transition: all 0.5s ease-out;
+}
+
+#c-h1::before {
+  color: black;
+  content: "MY PORTOFOLIO.";
+  position: absolute;
+  font-size: 120px;
+  cursor: default;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 2px;
+  transition: all 0.3s ease-out;
+}
+
+#c-h1::after {
+  color: white;
+  content: "MY PORTOFOLIO.";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 120px;
+  cursor: default;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 2px;
+  transition: all 0.5s ease-out;
+  z-index: -1;
+}
+
+#c-h1:hover {
+  transform: translate(-16px, -16px);
+}
+#c-h1:hover::before {
+  transform: translate(-16px, -16px);
+}
+#c-h1:hover::after {
+  transform: translate(8px, 8px);
+  /* visibility: visible; */
+}
+
+.center a {
+  cursor: default;
+}
+
+a button {
+  margin: 0;
+}
+
+#btn-sec1 {
+  padding: 8px 20px;
+  margin-top: 60px;
+  color: blueviolet;
+  background-color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  border: 2px solid blueviolet;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+#btn-sec1:hover {
+  padding: 8px 32px;
+  cursor: pointer;
+  color: white;
+  background-color: blueviolet;
+  box-shadow: 4px 4px 5px rgba(119, 78, 157, 0.5);
+  border-radius: 20px;
+}
+#btn-sec1:active {
+  color: rgb(244, 244, 244);
+  background-color: rgb(82, 8, 152);
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 0px rgba(234, 211, 255, 0.5);
+  transform: translate(0px, 0px);
+}
+
+/* --------------------------------------------------------------------------------------*/
+#sec2 {
+  display: block;
+
+  background-color: white;
+  padding: 80px 100px;
+  gap: 20px;
+}
+
+@media (min-width: 1320px) {
+  #sec2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 100px 100px;
+  }
+}
+
+#sec2 .about {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec2 .gambar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec2 img {
+  background-color: rgb(188, 134, 239);
+  /* border: 2px solid black; */
+  border-radius: 0 0 200px 200px;
+  box-shadow: inset 20px 20px 20px rgb(107, 61, 150),
+    12px 12px 20px rgb(170, 170, 170);
+  transition: all 1s ease;
+}
+
+#sec2 img:hover {
+  background-color: papayawhip;
+  /* border: 2px solid black; */
+  border-radius: 0 0 200px 200px;
+  transform: translate(-12px, -32px);
+  box-shadow: inset -20px -20px 20px rgb(177, 153, 115),
+    12px 12px 20px rgb(170, 170, 170);
+}
+
+#sec2 h2 {
+  max-width: 600px;
+}
+
+#sec2 h3 {
+  font-size: 12px;
+  max-width: 35rem;
+}
+
+/* ------------------------------------------------------------------------- */
+
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 7px 0 20px lightgray; */
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+#sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  bottom: 700px;
+}
+
+#logo h3 {
+  font-size: 32px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+#logo h3:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+#page {
+  display: flex;
+}
+
+#page ul {
+  margin: 0;
+}
+
+#page li a {
+  margin: 0 20px;
+  transition: 0.5s ease-in-out;
+  color: rgb(154, 93, 183);
+  font-weight: 700;
+  background-color: #fffff000;
+  padding: 8px 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+#page li a:hover {
+  border-radius: 20px;
+  background-color: rgb(225, 197, 253);
+  color: rgb(101, 61, 120);
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+/* ------------------------------------------------------------------- */
+#sec3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(188, 134, 239);
+  padding: 150px;
+}
+
+.skills {
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50%;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.skills .bx {
+  font-size: 18rem;
+  /* box-shadow: inset 8px 8px 12px blueviolet; */
+  border: 4px solid transparent;
+  border-radius: 20px;
+  background-color: gainsboro;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 12px 12px 20px rgba(87, 87, 87, 0.781);
+  rotate: 3deg;
+}
+.skills .bx:hover {
+  background-color: white;
+}
+
+.skills .bxl-javascript {
+  transform: translateY(-50px);
+}
+.skills .bxl-javascript:hover {
+  color: yellow;
+  border: 4px solid yellow;
+  rotate: 0deg;
+}
+
+.skills .bxl-html5 {
+  transform: translateY(0px);
+}
+.skills .bxl-html5:hover {
+  color: rgb(255, 132, 0);
+  border: 4px solid rgb(255, 132, 0);
+  rotate: 0deg;
+}
+
+.skills .bxl-css3 {
+  transform: translateY(50px);
+}
+.skills .bxl-css3:hover {
+  color: rgb(90, 90, 255);
+  border: 4px solid rgb(90, 90, 255);
+  rotate: 0deg;
+}
+
+/* ------------------------------------------------------------------- */
+#sec4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  background-color: #222;
+}
+
+.heading {
+  margin-bottom: 40px;
+}
+
+.heading h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.videos {
+  display: flex;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.vid {
+  display: flex;
+  width: 251px;
+  height: 142px;
+  align-items: center;
+  /* background-color: rgb(223, 222, 222); */
+  /* border-radius: 12px; */
+  transition: all 0.3s ease;
+}
+.vid:hover {
+  transform: translate(-4px, -4px);
+}
+
+.cardVid {
+  padding: 12px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.cardVid a {
+  width: 251px;
+  color: wheat;
+  transition: all 0.3s ease;
+}
+
+.cardVid a:hover {
+  color: blueviolet;
+}
+
+/* ------------------------------------------------------------------------- */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: white;
+  cursor: default;
+}
+
+.sosmed .bx {
+  color: black;
+  font-size: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+.sosmed .bx:hover {
+  color: blueviolet;
+  font-size: 40px;
+}
+
+.bxs-heart {
+  color: red;
+  transition: all 0.5s cubic-bezier(0.02, 1.09, 0.41, 1);
+}
+
+.bxs-heart:hover {
+  font-size: 28px;
+}
+
+/* ----------------------------------------------------------------------------------- */
